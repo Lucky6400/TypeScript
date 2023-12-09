@@ -11,7 +11,7 @@ extendable usage by implementing (or overriding) specific factory methods. Takin
 createStages method, for example, we can create a one-stage rocket or a two-stage rocket
 by providing different createStages method that return one or two stages respectively.
 
-?Pattern scope
+? Pattern scope
 The Factory Method Pattern decouples Rocket from the constructor implementation and
 makes it possible for subclasses of a factory to change what's built accordingly. A concrete
 creator still cares about what exactly its components are and how they are built. But the
@@ -150,7 +150,7 @@ console.log(myFreightRocket);
 
 
 /*
-?Consequences
+? Consequences
 In the preceding implementation, the factory method buildRocket handles the outline of
 the building steps. We were lucky to have the freight rocket in the same structure as the
 very first rocket we had defined.
@@ -158,4 +158,7 @@ But that won't always happen. If we want to change the class of products (Rocket
 have to override the entire buildRocket with everything else but the class name. This
 looks frustrating but it can be solved, again, by decoupling the creation of a rocket instance
 from the building process.
+
+? Use cases
+This pattern is useful to build software for manufacturing industries, restaurants, furniture and electronics production etc...
 */
