@@ -1,11 +1,11 @@
 // The members of a class (properties & methods) are typed using type annotations.
 
 class Chelsea {
-    centerForward: string = "Diego Costa"
+    centerForward: string = "Diego Costa";
 }
 
 let chelsea = new Chelsea();
-let cf = chelsea.centerForward
+let cf = chelsea.centerForward;
 console.log(cf)
 
 /*

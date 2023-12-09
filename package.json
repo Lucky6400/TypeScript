@@ -1,5 +1,5 @@
 {
-  "name": "typescript-learniing",
+  "name": "typescript-tutorials",
   "version": "1.0.0",
   "description": "learning typescript",
   "main": "index.js",
@@ -9,6 +9,6 @@
   "author": "Lucky Jain",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^4.8.4"
+    "typescript": "^5.3.3"
   }
 }
