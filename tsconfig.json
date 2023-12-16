@@ -3,6 +3,6 @@
         "strictPropertyInitialization": false,
     },
     "files": [
-        "./index.ts"
+        "./Basics/index.ts"
     ]
 }
