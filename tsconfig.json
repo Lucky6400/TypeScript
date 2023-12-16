@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "strictPropertyInitialization": false,
+        "target": "ES5"
     },
     "files": [
         "./Basics/index.ts"
