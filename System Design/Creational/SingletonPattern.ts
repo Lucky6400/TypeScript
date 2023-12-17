@@ -18,10 +18,14 @@ class Country {
     public get getName(): string {
         return this.name;
     }
+
+    public set setName(value: string) {
+        this.name = value;
+    }
 }
 
 const bharat: Country = Country.default;
-const spain: Country = Country.default;
-
+const india: Country = Country.default;
+india.setName = "india";
 console.log(bharat)
-console.log(spain)
+console.log(india)
