@@ -3,6 +3,21 @@ There are scenarios in which only one instance of the specific class should ever
 that leads to Singleton Pattern.
 */
 
+export class Singleton {
+    // Stores the singleton instance
+    private static instance: Singleton;
+    // Prevents creation of new instances
+    private constructor() { }
+    // Method to retrieve instance
+    static getInstance() {
+        if (!Singleton.instance) {
+            Singleton.instance = new Singleton();
+        }
+        return Singleton.instance;
+    }
+}
+
+
 class Country {
     private name: string = 'Bharat';
 
