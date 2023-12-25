@@ -55,29 +55,19 @@ cricketersService.getCricketers().then(cricketers => {
 });
 
 
-class Country {
-    private name: string = 'Bharat';
+// parametric singleton
+class ParametricSingleton {
+    private static instances: Map<string, ParametricSingleton>;
+    private param: string;
 
-    private static _default: Country;
+    private constructor(param: string) {
+        this.param = param;
+    }
 
-    static get default(): Country {
-        if (!Country._default) {
-            Country._default = new Country();
+    static getInstance(instance: string): ParametricSingleton {
+        if(!this.instances.has(instance)) {
+            this.instances.set(instance, new ParametricSingleton(instance));
         }
-        return Country._default;
-    }
-
-    public get getName(): string {
-        return this.name;
-    }
-
-    public set setName(value: string) {
-        this.name = value;
+        return this.instances.get(instance);
     }
 }
-
-const bharat: Country = Country.default;
-const india: Country = Country.default;
-india.setName = "india";
-console.log(bharat)
-console.log(india)
