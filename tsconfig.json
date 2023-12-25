@@ -1,9 +1,12 @@
 {
     "compilerOptions": {
         "strictPropertyInitialization": false,
-        "target": "ES5"
+        "target": "ES5",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
     },
     "files": [
-        "./Basics/index.ts"
+        "./Basics/index.ts",
+        "./System Design/Creational/SingletonPattern.ts"
     ]
 }
