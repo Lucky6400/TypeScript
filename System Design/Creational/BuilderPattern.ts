@@ -209,3 +209,44 @@ steps influence each other, it provides the maximum flexibility by subclassing t
 itself, without changing the director (which plays a similar role to a client in the Abstract
 Factory Pattern).
 */
+
+
+// Modern Implementation
+export type Builder<T> = {
+    [k in keyof T]-?: (arg: T[k]) => Builder<T>;
+} & {
+    build(): T;
+};
+
+export function ModelBuilder<T>(): Builder<T> {
+    const built: Record<string, unknown> = {};
+    const builder = new Proxy(
+        {},
+        {
+            get(target, prop) {
+                if ("build" === prop) {
+                    return () => built;
+                }
+                return (x: unknown): unknown => {
+                    built[prop.toString()] = x;
+                    return builder;
+                };
+            },
+        }
+    );
+    return builder as Builder<T>;
+}
+
+interface User {
+    id: number;
+    name: string;
+    email: string;
+}
+
+const user = ModelBuilder<User>()
+    .id(1)
+    .name("Theo")
+    .email("theo@example.com")
+    .build();
+
+console.log(user)
