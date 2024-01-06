@@ -9,7 +9,11 @@
   "author": "Lucky Jain",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/lodash-es": "^4.17.12",
     "inversify": "^6.0.2",
+    "lodash": "^4.17.21",
+    "package": "^1.0.1",
     "reflect-metadata": "^0.2.1",
     "typescript": "^5.3.3"
   },
