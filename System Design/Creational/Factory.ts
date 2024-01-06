@@ -79,3 +79,5 @@ const rahulDravid = new RahulDravidFactory();
 
 console.log(anilKumble.create());
 console.log(rahulDravid.create())
+
+export { Player, PlayerFactory, AnilKumbleFactory, RahulDravidFactory, AnilKumble, RahulDravid }
