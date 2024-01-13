@@ -88,6 +88,8 @@ const factory = new ExperimentalRocketFactory();
 const rocket = client.buildRocket(factory);
 console.log(rocket)
 
+export { ExperimentalRocket, ExperimentalRocketFactory, Client, RocketFactory };
+
 /*
 The Abstract Factory Pattern makes it easy and smooth to change the entire family of
 products. This is the direct benefit brought by the factory level abstraction.
