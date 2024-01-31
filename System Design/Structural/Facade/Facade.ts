@@ -16,5 +16,35 @@ Although you can still manually enter the numbers, the UI Façade can carry out 
 process for you in one go. Let's explore when you will have to use this pattern in practice.
 */
 
+import { Batsman, Bowler } from "./typings";
 
+export class OpeningBatsman implements Batsman {
+    playShot(): void {
+        console.log("He hits the first ball for four!")
+    }
+}
 
+export class OpeningBowler implements Bowler {
+    bowl(): void {
+        console.log("Bowled him! He takes the wicket off his first ball.")
+    }
+
+}
+
+export class AllRounder {
+    private batsman: Batsman;
+    private bowler: Bowler;
+
+    constructor(batsman: Batsman, bowler: Bowler) {
+        this.batsman = batsman;
+        this.bowler = bowler;
+    }
+
+    play(): void {
+        this.batsman.playShot();
+        this.bowler.bowl();
+    }
+}
+
+const allrounder = new AllRounder(new OpeningBatsman(), new OpeningBowler());
+allrounder.play();
