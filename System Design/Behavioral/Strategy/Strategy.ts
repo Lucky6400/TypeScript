@@ -1,8 +1,8 @@
-interface Strategy {
+export interface Strategy {
     play(): void;
 }
 
-class StrategyForGermany implements Strategy {
+export class StrategyForGermany implements Strategy {
     play(): void {
         console.log(`
         Formation: 4-3-3
@@ -12,7 +12,7 @@ class StrategyForGermany implements Strategy {
     }
 }
 
-class StrategyForItaly implements Strategy {
+export class StrategyForItaly implements Strategy {
     play(): void {
         console.log(`
         Formation: 4-3-3
@@ -22,7 +22,7 @@ class StrategyForItaly implements Strategy {
     }
 }
 
-class StrategyContext {
+export class StrategyContext {
     private strategy: Strategy;
 
     constructor() {
