@@ -77,7 +77,30 @@ class RahulDravidFactory implements PlayerFactory {
 const anilKumble = new AnilKumbleFactory();
 const rahulDravid = new RahulDravidFactory();
 
-console.log(anilKumble.create());
-console.log(rahulDravid.create())
+// console.log(anilKumble.create());
+// console.log(rahulDravid.create())
 
 export { Player, PlayerFactory, AnilKumbleFactory, RahulDravidFactory, AnilKumble, RahulDravid }
+
+// Modern implementation
+
+enum PlayerType {
+    ANILKUMBLE,
+    RAHULDRAVID,
+}
+
+class PlayerCreator {
+
+    private map: Map<PlayerType, any>;
+
+    constructor() {
+        this.map = new Map();
+        this.map.set(PlayerType.ANILKUMBLE, AnilKumble);
+    }
+
+    create(playerType: PlayerType): Player {
+        return this.map.get(playerType);
+    }
+}
+
+console.log(new PlayerCreator().create(PlayerType.ANILKUMBLE).getName())
