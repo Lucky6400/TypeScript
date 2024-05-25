@@ -2,3 +2,4 @@ node_modules
 test*.ts
 test*.js
 YouTube/
+.DS_STORE
