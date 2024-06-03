@@ -1,0 +1,3 @@
+/* In the push pattern, the consumer receives new values from the producer as soon as they become available. This is the opposite of the pull pattern and can lead to better efficiency in terms of communication overhead since the responsibility now rests with the producer to push the relevant values to consumers and maybe offer some extra features, such as replays or persisted messages. */
+
+// The code for this is same as that of Observer pattern
