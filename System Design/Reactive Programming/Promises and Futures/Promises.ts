@@ -15,6 +15,8 @@ const dataFromApi = new Promise(async (res, rej) => {
 
 dataFromApi.then(res => console.log(res)).catch(err => console.log(err));
 
+// other methods
+
 function delay(ms: number = 1000) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -23,8 +25,10 @@ function failAfter(ms: number = 1000) {
     return new Promise((_, reject) => setTimeout(reject, ms));
 }
 
+// whichever resolves first
 const races = Promise.race([delay(1000), failAfter(500)]);
 
+// concurrently resolve all
 const all = Promise.all([delay(1000), failAfter(1500)]);
 
 (async () => {
