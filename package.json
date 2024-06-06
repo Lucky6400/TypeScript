@@ -12,6 +12,7 @@
     "@babel/preset-env": "^7.23.7",
     "@types/lodash": "^4.14.202",
     "@types/lodash-es": "^4.17.12",
+    "axios": "^1.7.2",
     "inversify": "^6.0.2",
     "lodash": "^4.17.21",
     "package": "^1.0.1",
