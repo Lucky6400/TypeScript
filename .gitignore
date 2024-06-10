@@ -4,3 +4,4 @@ test*.js
 YouTube/
 .DS_STORE
 .fleet/
+.idea/
