@@ -3,3 +3,4 @@ test*.ts
 test*.js
 YouTube/
 .DS_STORE
+.fleet/
