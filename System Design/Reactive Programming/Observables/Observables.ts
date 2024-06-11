@@ -4,7 +4,7 @@ An observable represents a sequence that is invokable and produces future values
 These are built upon the Observer pattern. However, this pattern worked specifically with classes and its scope was limited. Observables, on the other hand, try to expand the idea of composing asynchronous and event-based programs that react based on changes.
 */
 
-import { from, Observable, of } from "rxjs";
+import { from, interval, Observable, of, share, take } from "rxjs";
 
 // To start with, you want to create a producer object that invokes future streams of data. There are several ways you can do that, starting with the observable object:
 
@@ -33,4 +33,20 @@ const randomValues = new Observable(sub => {
     }, 1000);
 });
 
+randomValues.subscribe(x => console.log(x));
 
+
+// till now we were creating the cold observables. Now we will create a hot observable
+
+/*
+Hot observable means when the producer emits data at a certain point irrespective of any subscriber list.
+Cold observable remains inactive until subscribed to.
+*/
+
+const streams = interval(1000).pipe(take(5), share());
+
+streams.subscribe(x => console.log("Val accepted from first subscriber ", x));
+
+setTimeout(() => {
+    streams.subscribe(v => console.log("Val accepted from second subscriber ",v));
+}, 3000);
