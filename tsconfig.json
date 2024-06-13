@@ -8,5 +8,7 @@
     "include": [
         "./System Design"
     ],
-
+    "exclude": [
+        "./System Design/Anti-Patterns and Workarounds"
+    ],
 }
