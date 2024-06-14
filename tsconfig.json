@@ -6,7 +6,8 @@
         "experimentalDecorators": true
     },
     "include": [
-        "./System Design"
+        "./System Design",
+        "./YouTube"
     ],
     "exclude": [
         "./System Design/Anti-Patterns and Workarounds"
