@@ -6,10 +6,10 @@
         "experimentalDecorators": true
     },
     "include": [
-        "./System Design",
-        "./YouTube"
+        "./System Design"
     ],
     "exclude": [
-        "./System Design/Anti-Patterns and Workarounds"
+        "./System Design/Anti-Patterns and Workarounds",
+        "./YouTube"
     ],
 }

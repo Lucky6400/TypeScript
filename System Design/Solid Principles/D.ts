@@ -40,7 +40,7 @@ type Player = {
 // }
 
 /*
-This program contains three entities. UserService is a top-level component that calls the UserRepositoryFactory class to get an instance of the UserRepository service. The violation of this principle happens here within the highlighted code section. We directly import UserRepositoryFactory inside the function, which makes it a hard dependency. If the UserRepositoryFactory class changes, we will have to change the UserService class as well. Additionally, we cannot easily test the method  in isolation and we will have to mock the whole UserRepositoryFactory module  to do that.
+This program contains three entities. PlayerService is a top-level component that calls the PlayerRepositoryFactory class to get an instance of the PlayerRepository service. The violation of this principle happens here within the highlighted code section. We directly import PlayerRepositoryFactory inside the function, which makes it a hard dependency. If the PlayerRepositoryFactory class changes, we will have to change the PlayerService class as well. Additionally, we cannot easily test the method  in isolation and we will have to mock the whole PlayerRepositoryFactory module  to do that.
 
 The solution to making it less dependent and more testable is to pass the instance in the constructor and make it implement an interface instead:
 */
