@@ -16,7 +16,7 @@ and how the original class method is called, so it can also be used as an access
 mechanism.
 */
 
-import { Cricketer } from "./typings";
+import { Cricketer } from './typings';
 
 export class Batsman implements Cricketer {
     public groundedShot(runs: number): void {
